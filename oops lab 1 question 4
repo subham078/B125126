@@ -1,0 +1,28 @@
+#4. Create a structure with Product ID, Product Name, Price, and Quantity. Calculate the total cost.
+
+#include <stdio.h>
+
+struct Product {
+    int productID;
+    char productName[50];
+    float price;
+    int quantity;
+};
+
+int main() {
+    struct Product p1;
+    float totalCost;
+
+    printf("Enter Product ID, Name, Price, and Quantity:\n");
+    scanf("%d", &p1.productID);
+    scanf(" %[^\n]s", p1.productName);
+    scanf("%f", &p1.price);
+    scanf("%d", &p1.quantity);
+
+    totalCost = p1.price * p1.quantity;
+
+    printf("\nProduct: %s\n", p1.productName);
+    printf("Total Cost (Price x Quantity): $%.2f\n", totalCost);
+
+    return 0;
+}
