@@ -1,0 +1,30 @@
+#7. Accept marks in C, Mathematics, and Physics for a student, then calculate the total and average.
+
+#include <stdio.h>
+
+struct StudentMarks {
+    int rollNumber;
+    char name[50];
+    float marksC;
+    float marksMath;
+    float marksPhy;
+};
+
+int main() {
+    struct StudentMarks s1;
+
+    printf("Enter Roll Number and Name: ");
+    scanf("%d", &s1.rollNumber);
+    scanf(" %[^\n]s", s1.name);
+    printf("Enter marks in C, Math, and Physics: ");
+    scanf("%f %f %f", &s1.marksC, &s1.marksMath, &s1.marksPhy);
+
+    float total = s1.marksC + s1.marksMath + s1.marksPhy;
+    float average = total / 3.0;
+
+    printf("\nStudent: %s\n", s1.name);
+    printf("Total Marks: %.2f\n", total);
+    printf("Average Marks: %.2f\n", average);
+
+    return 0;
+}
