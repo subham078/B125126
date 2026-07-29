@@ -1,0 +1,23 @@
+#5. Create a structure with Length and Breadth, then calculate the area and perimeter.
+
+#include <stdio.h>
+
+struct Rectangle {
+    float length;
+    float breadth;
+};
+
+int main() {
+    struct Rectangle rect;
+
+    printf("Enter Length and Breadth of the rectangle:\n");
+    scanf("%f %f", &rect.length, &rect.breadth);
+
+    float area = rect.length * rect.breadth;
+    float perimeter = 2 * (rect.length + rect.breadth);
+
+    printf("\nArea: %.2f\n", area);
+    printf("Perimeter: %.2f\n", perimeter);
+
+    return 0;
+}
