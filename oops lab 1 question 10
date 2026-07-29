@@ -1,0 +1,33 @@
+#10. Create a nested structure for Date of Birth within a Student structure, and display the complete info.
+
+#include <stdio.h>
+
+struct Date {
+    int day;
+    int month;
+    int year;
+};
+
+struct Student {
+    int rollNumber;
+    char name[50];
+    struct Date dob;
+};
+
+int main() {
+    struct Student s1;
+
+    printf("Enter Roll Number: ");
+    scanf("%d", &s1.rollNumber);
+    printf("Enter Name: ");
+    scanf(" %[^\n]s", s1.name);
+    printf("Enter Date of Birth (DD MM YYYY): ");
+    scanf("%d %d %d", &s1.dob.day, &s1.dob.month, &s1.dob.year);
+
+    printf("\n--- Complete Student Information ---\n");
+    printf("Roll Number: %d\n", s1.rollNumber);
+    printf("Name: %s\n", s1.name);
+    printf("Date of Birth: %02d/%02d/%04d\n", s1.dob.day, s1.dob.month, s1.dob.year);
+
+    return 0;
+}
