@@ -1,0 +1,32 @@
+#8. Create a structure for 5 employees and display the details of the employee with the highest salary
+
+#include <stdio.h>
+
+struct Employee {
+    int empID;
+    char name[50];
+    float salary;
+};
+
+int main() {
+    struct Employee emp[5];
+    int maxIndex = 0;
+
+    for (int i = 0; i < 5; i++) {
+        printf("Enter details for Employee %d (ID, Name, Salary):\n", i + 1);
+        scanf("%d", &emp[i].empID);
+        scanf(" %[^\n]s", emp[i].name);
+        scanf("%f", &emp[i].salary);
+
+        if (emp[i].salary > emp[maxIndex].salary) {
+            maxIndex = i;
+        }
+    }
+
+    printf("\n--- Employee with Highest Salary ---\n");
+    printf("ID: %d\n", emp[maxIndex].empID);
+    printf("Name: %s\n", emp[maxIndex].name);
+    printf("Salary: %.2f\n", emp[maxIndex].salary);
+
+    return 0;
+}
