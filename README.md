@@ -20,7 +20,7 @@ int main() {
     printf("Enter Age: ");
     scanf("%d", &s1.age);
     printf("Enter CGPA: ");
-    scanf("%f", &s1.cgpa);
+    scanf("%f", &s1.cgpa); 
 
    printf("\n--- Student Details ---\n");
     printf("Roll Number: %d\n", s1.rollNumber);
