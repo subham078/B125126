@@ -1,0 +1,27 @@
+#2.Create a structure containing Employee ID, Name, and Salary, then accept and display records for 3 employees.
+
+#include <stdio.h>
+
+struct Employee {
+    int empID;
+    char name[50];
+    float salary;
+};
+
+int main() {
+    struct Employee emp[3];
+
+    for (int i = 0; i < 3; i++) {
+        printf("Enter details for Employee %d (ID, Name, Salary):\n", i + 1);
+        scanf("%d", &emp[i].empID);
+        scanf(" %[^\n]s", emp[i].name);
+        scanf("%f", &emp[i].salary);
+    }
+
+    printf("\n--- Employee Records ---\n");
+    for (int i = 0; i < 3; i++) {
+        printf("ID: %d | Name: %s | Salary: %.2f\n", emp[i].empID, emp[i].name, emp[i].salary);
+    }
+
+    return 0;
+}
