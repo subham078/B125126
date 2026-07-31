@@ -23,7 +23,7 @@ int main() {
         }
     }
 
-    printf("\n--- Employee with Highest Salary ---\n");
+    printf("\n Employee with Highest Salary \n");
     printf("ID: %d\n", emp[maxIndex].empID);
     printf("Name: %s\n", emp[maxIndex].name);
     printf("Salary: %.2f\n", emp[maxIndex].salary);
