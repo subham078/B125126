@@ -18,7 +18,7 @@ int main() {
         scanf("%f", &emp[i].salary);
     }
 
-    printf("\n--- Employee Records ---\n");
+    printf("\n    Employee Records    \n");
     for (int i = 0; i < 3; i++) {
         printf("ID: %d | Name: %s | Salary: %.2f\n", emp[i].empID, emp[i].name, emp[i].salary);
     }
