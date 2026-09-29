@@ -1,0 +1,35 @@
+//q9.Temperature Comparison
+
+#include <iostream>
+using namespace std;
+
+class Temperature
+{
+    float celsius;
+public:
+    Temperature(float c = 0)
+    {
+        celsius = c;
+    }
+    bool operator<(Temperature t)
+    {
+        return celsius < t.celsius;
+    }
+    bool operator>(Temperature t)
+    {
+        return celsius > t.celsius;
+    }
+};
+
+int main()
+{
+    Temperature t1(25);
+    Temperature t2(30);
+    if (t1 < t2)
+        cout << "First temperature is lower.";
+    else if (t1 > t2)
+        cout << "First temperature is higher.";
+    else
+        cout << "Both temperatures are equal.";
+    return 0;
+}
